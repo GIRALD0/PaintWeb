@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>PaintWeb</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
 </head>
+
 <body>
-    
+
+    <h1>PaintWeb</h1>
+
+    <!-- ToolsBar-->
+    <div class="tools">
+
+       
+        <div class="tools__item">
+            <button class="tools__item--btn" id="eraser"><box-icon type='solid' name='eraser'></box-icon></button>
+        </div
+        <div class="tools__item">
+            <button class="tools__item--btn" id="clear"><box-icon type='solid' name='trash'></box-icon></button>
+        </div>
+        <div class="tools__item">
+            <button class="tools__item--btn" id="save"><box-icon type='solid' name='save'></box-icon></button>
+        </div>
+        <div class="tools_item">
+            <button class="tools_item--btn" id="pencil" value="1"><box-icon name='pencil' type='solid' ></box-icon></button>
+        </div>
+        <div class="tools_item">
+            <button class="tools_item--btn" id="brush" value="3"><box-icon name='brush' type='solid' ></box-icon></button>
+        </div>
+        <div class="tools_item">
+            <button class="tools_item--btn" id="paint" value="5"><box-icon name='paint' type='solid' ></box-icon></button>
+        </div>
+        <div class="tools_item">
+            <button class="tools_item--btn" id="paint-roll"><box-icon name='paint-roll' type='solid' ></box-icon></button>
+        </div>
+
+        <input class=" color tools_item" type="color" name="color" id="color">
+
+        <div class="tools_item thickness">
+            <select name="thickness" id="thickness">
+                <option value="2">2</option>
+                <option value="6">6</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Canvas -->
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
 </body>
+
 </html>

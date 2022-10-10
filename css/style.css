@@ -97,17 +97,17 @@ h1 {
   font-weight: 500;
   letter-spacing: 5px;
   padding: 55px;
-  font-size: 3.5em !important;
+  font-size: 2.5em !important;
 }
 
 /* Tools */
 
 .tools {
   position: absolute;
-  margin: 0 30px;
-  top: 27%;
+  margin: 0 20px;
+  top: 26%;
   background: rgba(255, 255, 255, 0.27);
-  border-radius: 16px;
+  border-radius: 12px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15.7px);
   -webkit-backdrop-filter: blur(15.7px);
@@ -115,8 +115,8 @@ h1 {
 }
 
 .tools_item {
-  margin: 15px 0;
-  padding: 10px;
+  margin: 5px 0;
+  padding: 8px;
 }
 
 .tools_item button {
@@ -143,9 +143,8 @@ h1 {
 
 canvas {
   position: absolute;
-  background-color: white;
   top: 22%;
-  left: 6%;
+  left: 7%;
   border-radius: 5%;
   z-index: 1;
   background: rgba(255, 255, 255, 0.78);

@@ -12,8 +12,6 @@ var colorPicker = document.getElementById("color").onchange = function () {
     color = this.value;
 };
 var thickness, x, y, estate = 0;
-var positionTop = canvas.offsetTop;
-var positionLeft = canvas.offsetLeft;
 
 /**
  * The following code is for the clear button and its functionality is that it clears the canvas.
@@ -132,10 +130,10 @@ function thickness() {
 
 function drawMouse(e) {
     if (estate == 1) {
-        draw(color, x, y, e.pageX - positionLeft, e.pageY - positionTop, thickness);
+        draw(color, x, y, e.pageX - canvas.offsetLeft, e.pageY - canvas.offsetTop, thickness);
     }
-    x = (e.pageX - positionLeft);
-    y = (e.pageY - positionTop);
+    x = (e.pageX - canvas.offsetLeft);
+    y = (e.pageY - canvas.offsetTop);
 }
 
 /**
@@ -146,12 +144,12 @@ function drawMouse(e) {
 
 function pressMouse(e) {
     estate = 1;
-    x = (e.pageX - positionLeft);
-    y = (e.pageY - positionTop);
+    x = (e.pageX - canvas.offsetLeft);
+    y = (e.pageY - canvas.offsetTop);
 }
 
 function leaveMouse(e) {
     estate = 0;
-    x = (e.pageX - positionLeft);
-    y = (e.pageY - positionTop);
+    x = (e.pageX - canvas.offsetLeft);
+    y = (e.pageY - canvas.offsetTop);
 }

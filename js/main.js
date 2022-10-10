@@ -38,19 +38,19 @@ eraser.addEventListener("click", function () {
 var save = document.getElementById("save");
 save.addEventListener("click", function () {
 
-    var imgData = ctx.getImageData(0,0,canvas.width,canvas.height);
-	var data 	= imgData.data;
-	
-	for(var i=0;i<data.length;i+=4){
-	    if(data[i+3]<255){
-	        data[i]=255;
-	        data[i+1]=255;
-	        data[i+2]=255;
-	        data[i+3]=255;
-	    }
-	}
+    var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    var data = imgData.data;
 
-	ctx.putImageData(imgData,0,0);
+    for (var i = 0; i < data.length; i += 4) {
+        if (data[i + 3] < 255) {
+            data[i] = 255;
+            data[i + 1] = 255;
+            data[i + 2] = 255;
+            data[i + 3] = 255;
+        }
+    }
+
+    ctx.putImageData(imgData, 0, 0);
 
     let enlace = document.createElement('a');
     enlace.download = "Canvas como imagen.jpg";
@@ -62,26 +62,34 @@ save.addEventListener("click", function () {
  *  Thw following code is for the pencil, brush, paint and paint-roll buttons and its functionality is that it changes the brush to the selected one.
  */
 
- var pencil = document.getElementById("pencil");
- pencil.addEventListener("click", function () {
-     thickness = parseInt(this.value);
- });
- 
- var brush = document.getElementById("brush");
- brush.addEventListener("click", function () {
-     thickness = parseInt(this.value);
- });
- 
- var paint = document.getElementById("paint");
- paint.addEventListener("click", function () {
-     thickness = parseInt(this.value);
- });
- 
- var paintRoll = document.getElementById("paint-roll");
- paintRoll.addEventListener("click", function () {
+var pencil = document.getElementById("pencil");
+pencil.addEventListener("click", function () {
+    thickness = parseInt(this.value);
+});
+
+var brush = document.getElementById("brush");
+brush.addEventListener("click", function () {
+    thickness = parseInt(this.value);
+});
+
+var paint = document.getElementById("paint");
+paint.addEventListener("click", function () {
+    thickness = parseInt(this.value);
+});
+
+var paintRoll = document.getElementById("paint-roll");
+paintRoll.addEventListener("click", function () {
     ctx.fillStyle = color;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
- });
+});
+
+/**
+ * The following code is for the thickness of the brush and its functionality is that it changes the thickness of the brush when the user selects a thickness.
+ */
+
+var thickness = document.getElementById("thickness").onchange = function () {
+    thickness = parseInt(this.value);
+};
 
 // Mouse events
 

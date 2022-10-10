@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PaintWeb</title>
+    <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/paint.png" type="image/png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -17,47 +18,91 @@
 
 <body>
 
-    <h1>PaintWeb</h1>
+    <div class="header">
 
-    <!-- ToolsBar-->
-    <div class="tools">
+        <!--Content before waves-->
+        <div class="inner-header flex">
 
-       
-        <div class="tools__item">
-            <button class="tools__item--btn" id="eraser"><box-icon type='solid' name='eraser'></box-icon></button>
-        </div
-        <div class="tools__item">
-            <button class="tools__item--btn" id="clear"><box-icon type='solid' name='trash'></box-icon></button>
-        </div>
-        <div class="tools__item">
-            <button class="tools__item--btn" id="save"><box-icon type='solid' name='save'></box-icon></button>
-        </div>
-        <div class="tools_item">
-            <button class="tools_item--btn" id="pencil" value="1"><box-icon name='pencil' type='solid' ></box-icon></button>
-        </div>
-        <div class="tools_item">
-            <button class="tools_item--btn" id="brush" value="3"><box-icon name='brush' type='solid' ></box-icon></button>
-        </div>
-        <div class="tools_item">
-            <button class="tools_item--btn" id="paint" value="5"><box-icon name='paint' type='solid' ></box-icon></button>
-        </div>
-        <div class="tools_item">
-            <button class="tools_item--btn" id="paint-roll"><box-icon name='paint-roll' type='solid' ></box-icon></button>
+            <!--title-->
+            <div class="title">
+                <h1>PaintWeb</h1>
+            </div>
+
+            <!-- ToolsBar-->
+            <div class="tools">
+
+
+                <div class="tools_item">
+                    <button class="tools__item--btn" id="eraser">
+                        <box-icon type='solid' name='eraser'></box-icon>
+                    </button>
+                </div>
+
+                <div class="tools_item">
+                    <button class="tools__item--btn" id="clear">
+                        <box-icon type='solid' name='trash'></box-icon>
+                    </button>
+                </div>
+
+                <div class="tools_item">
+                    <button class="tools__item--btn" id="save">
+                        <box-icon type='solid' name='save'></box-icon>
+                    </button>
+                </div>
+
+                <div class="tools_item">
+                    <button class="tools_item--btn" id="pencil" value="1">
+                        <box-icon name='pencil' type='solid'></box-icon>
+                    </button>
+                </div>
+
+                <div class="tools_item">
+                    <button class="tools_item--btn" id="brush" value="3">
+                        <box-icon name='brush' type='solid'></box-icon>
+                    </button>
+                </div>
+
+                <div class="tools_item">
+                    <button class="tools_item--btn" id="paint" value="5">
+                        <box-icon name='paint' type='solid'></box-icon>
+                    </button>
+                </div>
+
+                <div class="tools_item">
+                    <button class="tools_item--btn" id="paint-roll">
+                        <box-icon name='paint-roll' type='solid'></box-icon>
+                    </button>
+                </div>
+
+                <input class="color tools_item" type="color" name="color" id="color">
+
+            </div>
+
+            <!-- Canvas -->
+            <canvas id="canvas" width="1800" height="750"></canvas>
+
         </div>
 
-        <input class=" color tools_item" type="color" name="color" id="color">
-
-        <div class="tools_item thickness">
-            <select name="thickness" id="thickness">
-                <option value="2">2</option>
-                <option value="6">6</option>
-                <option value="10">10</option>
-            </select>
+        <!--Waves Container-->
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
         </div>
+        <!--Waves end-->
+
     </div>
-
-    <!-- Canvas -->
-    <canvas id="canvas" width="800" height="600"></canvas>
+    <!--Header ends-->
 
     <!-- JavaScript -->
     <script src="/js/main.js"></script>

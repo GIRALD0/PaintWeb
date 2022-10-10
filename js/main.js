@@ -83,14 +83,6 @@ paintRoll.addEventListener("click", function () {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 });
 
-/**
- * The following code is for the thickness of the brush and its functionality is that it changes the thickness of the brush when the user selects a thickness.
- */
-
-var thickness = document.getElementById("thickness").onchange = function () {
-    thickness = parseInt(this.value);
-};
-
 // Mouse events
 
 canvas.addEventListener("mousedown", pressMouse);

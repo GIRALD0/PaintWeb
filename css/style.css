@@ -1,7 +1,156 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300:400');
+
+/* Backgrounds */
+
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+  color: white;
+}
+
+.inner-header {
+  height: 70vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  /*Flexbox for containers*/
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+}
+
+/* Title */
+
+.title {
+  display: inline;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  letter-spacing: 5px;
+  padding: 55px;
+  font-size: 3.5em !important;
+}
+
+/* Tools */
+
+.tools {
+  position: absolute;
+  margin: 0 30px;
+  top: 27%;
+  background: rgba(255, 255, 255, 0.27);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15.7px);
+  -webkit-backdrop-filter: blur(15.7px);
+  z-index: 1;
+}
+
+.tools_item {
+  margin: 15px 0;
+  padding: 10px;
+}
+
+.tools_item button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.27);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.8px);
+  -webkit-backdrop-filter: blur(12.8px);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.tools_item button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.tools_item .color {
+  border: none;
+}
+
 /* Canvas */
 
 canvas {
-    background-color: white;
-    border: 3px solid #000;
-    
-  }
+  position: absolute;
+  background-color: white;
+  top: 22%;
+  left: 6%;
+  border-radius: 5%;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}

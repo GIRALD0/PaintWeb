@@ -105,7 +105,7 @@ h1 {
 .tools {
   position: absolute;
   margin: 0 10px;
-  top: 27%;
+  top: 24.8%;
   background: rgba(255, 255, 255, 0.27);
   border-radius: 12px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -133,19 +133,9 @@ h1 {
 
 .tools_item button:hover {
   background: rgba(255, 255, 255, 0.5);
-}
-
-.tools_item .color {
-  border: none;
-}
-
-/* Grid */
-
-.grid {
-  display: grid;
-  grid-template-columns: 10% 90%;
-  grid-gap: 10px;
-  padding: 10px;
+} 
+.hide {
+  display: none;
 }
 
 /* Canvas */
@@ -153,7 +143,7 @@ h1 {
 canvas {
   position: absolute;
   top: 22%;
-  left: 7%;
+  left: 6%;
   border-radius: 5%;
   z-index: 1;
   background: rgba(255, 255, 255, 0.78);

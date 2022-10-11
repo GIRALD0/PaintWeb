@@ -75,12 +75,16 @@
                         </button>
                     </div>
 
-                    <input class="color tools_item" type="color" name="color" id="color">
-
+                    <div class="tools_item">
+                        <button class="tools_item--btn" id="color-picker">
+                            <box-icon name='eyedropper' type='solid'></box-icon>
+                        </button>
+                        <input class="color hide" type="color" name="color" id="color">
+                    </div>
                 </div>
 
                 <!-- Canvas -->
-                <canvas id="canvas" width="1230" height="550"></canvas>
+                <canvas id="canvas" width="1220" height="540"></canvas>
 
             </div>
         </div>
@@ -109,6 +113,7 @@
     <!-- JavaScript -->
     <script src="/js/main.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://kit.fontawesome.com/71c64a4069.js" crossorigin="anonymous"></script>
 
 </body>
 

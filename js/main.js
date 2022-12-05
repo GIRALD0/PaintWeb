@@ -3,6 +3,15 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
+
+const resize = () => {
+    ctx.canvas.width = window.innerWidth - 150;
+    ctx.canvas.height = window.innerHeight - 250;
+};
+
+window.addEventListener('resize', resize);
+resize();
+
 /** 
  *  The following code is for the input color and its functionality is that it changes the color of the brush when the user selects a color.
  *  @type {*} 
